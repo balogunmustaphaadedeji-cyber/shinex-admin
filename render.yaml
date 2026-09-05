@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: shinex-admin
+    runtime: static
+    buildCommand: npm run build
+    staticPublishPath: build
+    envVars:
+      - key: REACT_APP_API_URL
+        value: https://shinex-marketplace.onrender.com/api
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
