@@ -1,0 +1,22 @@
+const base = { width: 18, height: 18, viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', strokeWidth: 1.8, strokeLinecap: 'round', strokeLinejoin: 'round' };
+
+export const DashboardIcon = (p) => <svg {...base} {...p}><rect x="3" y="3" width="8" height="8" rx="1.5" /><rect x="13" y="3" width="8" height="5" rx="1.5" /><rect x="13" y="12" width="8" height="9" rx="1.5" /><rect x="3" y="15" width="8" height="6" rx="1.5" /></svg>;
+export const UsersIcon = (p) => <svg {...base} {...p}><circle cx="9" cy="8" r="3.2" /><path d="M3 20c1-3.5 3.5-5.5 6-5.5s5 2 6 5.5" /><circle cx="17" cy="8.5" r="2.4" /><path d="M16 14.3c2 .4 3.5 2 4.3 5.2" /></svg>;
+export const BoxIcon = (p) => <svg {...base} {...p}><path d="M3 8l9-5 9 5-9 5-9-5Z" /><path d="M3 8v8l9 5 9-5V8" /><path d="M12 13v8" /></svg>;
+export const GridIcon = (p) => <svg {...base} {...p}><rect x="3" y="3" width="7" height="7" rx="1.3" /><rect x="14" y="3" width="7" height="7" rx="1.3" /><rect x="3" y="14" width="7" height="7" rx="1.3" /><rect x="14" y="14" width="7" height="7" rx="1.3" /></svg>;
+export const MegaphoneIcon = (p) => <svg {...base} {...p}><path d="M3 11v3a1 1 0 0 0 1 1h2l2 5h2l-1.3-5H12l7 3V6l-7 3H3Z" /></svg>;
+export const CreditCardIcon = (p) => <svg {...base} {...p}><rect x="2.5" y="5" width="19" height="14" rx="2" /><path d="M2.5 10h19" /></svg>;
+export const FlagIcon = (p) => <svg {...base} {...p}><path d="M5 3v18" /><path d="M5 4h13l-2 4 2 4H5" /></svg>;
+export const MailIcon = (p) => <svg {...base} {...p}><rect x="2.5" y="5" width="19" height="14" rx="2" /><path d="m3.5 6.5 8.5 6.5 8.5-6.5" /></svg>;
+export const SettingsIcon = (p) => <svg {...base} {...p}><circle cx="12" cy="12" r="3.3" /><path d="M19.4 13a7.6 7.6 0 0 0 0-2l2-1.5-2-3.4-2.4.7a7.7 7.7 0 0 0-1.7-1L15 3h-4l-.3 2.8a7.7 7.7 0 0 0-1.7 1l-2.4-.7-2 3.4L6.6 11a7.6 7.6 0 0 0 0 2l-2 1.5 2 3.4 2.4-.7c.5.4 1.1.75 1.7 1L11 21h4l.3-2.8a7.7 7.7 0 0 0 1.7-1l2.4.7 2-3.4-2-1.5Z" /></svg>;
+export const LogoutIcon = (p) => <svg {...base} {...p}><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" /><path d="m16 17 5-5-5-5" /><path d="M21 12H9" /></svg>;
+export const SearchIcon = (p) => <svg {...base} {...p}><circle cx="11" cy="11" r="7" /><path d="m21 21-4.3-4.3" /></svg>;
+export const ChevronLeftIcon = (p) => <svg {...base} {...p}><path d="m15 18-6-6 6-6" /></svg>;
+export const XIcon = (p) => <svg {...base} {...p}><path d="M18 6 6 18M6 6l12 12" /></svg>;
+export const CheckIcon = (p) => <svg {...base} {...p}><path d="m5 13 4 4L19 7" /></svg>;
+export const TrashIcon = (p) => <svg {...base} {...p}><path d="M5 7h14M9 7V5h6v2M7 7l1 13h8l1-13" /></svg>;
+export const EditIcon = (p) => <svg {...base} {...p}><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-3-3L5 17v3Z" /></svg>;
+export const PlusIcon = (p) => <svg {...base} {...p}><path d="M12 5v14M5 12h14" /></svg>;
+export const ShieldIcon = (p) => <svg {...base} {...p}><path d="M12 3 5 6v6c0 4.5 3 7.5 7 9 4-1.5 7-4.5 7-9V6Z" /></svg>;
+export const MenuIcon = (p) => <svg {...base} {...p}><path d="M4 6h16M4 12h16M4 18h16" /></svg>;
+export const CrownIcon = (p) => <svg {...base} {...p}><path d="m3 8 4 3 5-6 5 6 4-3-2 10H5Z" /></svg>;
