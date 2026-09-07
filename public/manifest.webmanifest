@@ -1,0 +1,12 @@
+{
+  "name": "SHINEX Admin",
+  "short_name": "SHINEX Admin",
+  "description": "Administrator console for SHINEX Marketplace",
+  "start_url": "/shinex-admin/",
+  "display": "standalone",
+  "background_color": "#f6faf7",
+  "theme_color": "#123027",
+  "icons": [
+    { "src": "/shinex-admin/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
