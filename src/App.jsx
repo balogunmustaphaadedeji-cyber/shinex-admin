@@ -15,6 +15,9 @@ import Durations from "./pages/Durations";
 import Payments from "./pages/Payments";
 import Reports from "./pages/Reports";
 import Messages from "./pages/Messages";
+import Subscriptions from "./pages/Subscriptions";
+import Tags from "./pages/Tags";
+import Policies from "./pages/Policies";
 
 export default function App() {
   return (
@@ -40,6 +43,9 @@ export default function App() {
               <Route path="/payments" element={<Payments />} />
               <Route path="/reports" element={<Reports />} />
               <Route path="/messages" element={<Messages />} />
+              <Route path="/subscriptions" element={<Subscriptions />} />
+              <Route path="/tags" element={<Tags />} />
+              <Route path="/policies" element={<Policies />} />
             </Route>
 
             <Route path="/" element={<Navigate to="/dashboard" replace />} />

@@ -17,6 +17,9 @@ const NAV_ITEMS = [
   { to: "/payments", label: "Payments", icon: CreditCard },
   { to: "/reports", label: "Reports", icon: Flag },
   { to: "/messages", label: "Contact", icon: Mail },
+  { to: "/subscriptions", label: "Subscriptions", icon: CreditCard },
+  { to: "/tags", label: "Listing Tags", icon: Tag },
+  { to: "/policies", label: "Policies", icon: Mail },
 ];
 
 export default function AdminLayout() {

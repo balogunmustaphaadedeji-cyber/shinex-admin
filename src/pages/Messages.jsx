@@ -1,14 +1,2 @@
-import React from "react";
-import { AdminTable } from "../components/AdminTable";
-
-export default function Messages() {
-  return (
-    <AdminTable
-      resource="contact"
-      columns={["name", "email", "subject", "status", "created_at"]}
-      title="Contact messages"
-      searchable
-      deletable
-    />
-  );
-}
+import React,{useEffect,useState} from 'react';import {api} from '../lib/api';
+export default function Messages(){const [rows,setRows]=useState([]),[open,setOpen]=useState(null),[reply,setReply]=useState('');const load=()=>api('/admin/contact?limit=50').then(r=>setRows(r.data||[]));useEffect(()=>{load()},[]);const send=async()=>{if(!reply.trim()||!open)return;await api(`/admin/contact/${open.id}/reply`,{method:'POST',body:{message:reply}});setReply('');load();const r=await api(`/admin/contact/${open.id}/replies`);setOpen({...open,replies:r.data||[]})};return <div><h1 className="text-2xl font-bold text-gray-900 mb-5">Contact messages</h1><div className="space-y-3">{rows.map(m=><div key={m.id} className="bg-white border rounded-2xl p-4"><div className="flex justify-between gap-4"><div><b>{m.subject}</b><p className="text-sm text-gray-500">{m.name} · {m.email}</p></div><button className="text-green-700 text-sm" onClick={async()=>{const r=await api(`/admin/contact/${m.id}/replies`);setOpen({...m,replies:r.data||[]})}}>Open</button></div><p className="text-sm text-gray-700 mt-3">{m.message}</p>{open?.id===m.id&&<div className="mt-4 border-t pt-4"><div className="space-y-2">{(open.replies||[]).map(r=><div key={r.id} className="bg-green-50 rounded-xl p-3 text-sm"><b>Support</b><p>{r.message}</p></div>)}</div><div className="flex gap-2 mt-3"><input className="flex-1 border rounded-lg px-3 py-2" placeholder="Write a reply" value={reply} onChange={e=>setReply(e.target.value)}/><button className="bg-green-700 text-white rounded-lg px-4" onClick={send}>Reply</button></div></div>}</div>)}</div></div>}
